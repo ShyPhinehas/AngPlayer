@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AngPlayer_Example' do
+  pod 'AngPlayer', :path => '../'
+
+  target 'AngPlayer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
