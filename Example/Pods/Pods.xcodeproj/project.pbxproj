@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		014A375DEED22B931CDA3FBD5BCE4F9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		6427DC1970EEA7B808FC5E059A2695EE /* AngPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 477E4F60C808C0128C9C5E545D6B5089 /* AngPlayer-dummy.m */; };
+		74ACF614CA789DEB84000C464C01963A /* Pods-AngPlayer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33929FB10CA272AB2D06A7AD238BF47B /* Pods-AngPlayer_Example-dummy.m */; };
+		755F99EF74EFD590263A8E3AE785EF71 /* AngPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C797F90CBF410C525ADBCA414A721EB /* AngPlayer.swift */; };
+		7A9CA3825543A6A9BAB810AFCC9A5006 /* AngPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE68DFECB19FE46E0A87CFFFBBC6859 /* AngPlayerVC.swift */; };
+		B1F425571BFCD4A436D2E1B36578DD0B /* Pods-AngPlayer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A50D984E0D55B2262E0630F218C5FC1 /* Pods-AngPlayer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B421213007E10EDEE30440F34DFAA375 /* AngPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 285BC8CB8C1A1F232EBF699C1FE4D033 /* AngPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E40D7003FEC135C1008D0BDD090194D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9FB148519C2D86C57E061C2D880FB5BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72C9B5FCC82B52FAF1A5398389972DA0;
+			remoteInfo = AngPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		094C4BD90361C5F866806998D0EBD6FC /* Pods-AngPlayer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AngPlayer_Example.release.xcconfig"; sourceTree = "<group>"; };
+		285BC8CB8C1A1F232EBF699C1FE4D033 /* AngPlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AngPlayer-umbrella.h"; sourceTree = "<group>"; };
+		318BA984CD12754B4C52F9488E1791C9 /* AngPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AngPlayer.modulemap; sourceTree = "<group>"; };
+		32BADA8A59BF546EC846F50625C64324 /* AngPlayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AngPlayer.xcconfig; sourceTree = "<group>"; };
+		33929FB10CA272AB2D06A7AD238BF47B /* Pods-AngPlayer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AngPlayer_Example-dummy.m"; sourceTree = "<group>"; };
+		42CD90CF4405C385D3AC759ECE701D20 /* Pods-AngPlayer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AngPlayer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		477E4F60C808C0128C9C5E545D6B5089 /* AngPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AngPlayer-dummy.m"; sourceTree = "<group>"; };
+		4C797F90CBF410C525ADBCA414A721EB /* AngPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AngPlayer.swift; sourceTree = "<group>"; };
+		506684CCF112D7EF738E98D3C5FBCA79 /* Pods-AngPlayer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AngPlayer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		55EB52A0C19E97C93915096362AE51BD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A50D984E0D55B2262E0630F218C5FC1 /* Pods-AngPlayer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AngPlayer_Example-umbrella.h"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B10069E1EDD17F7DF36538D7B048701D /* Pods-AngPlayer_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AngPlayer_Example-resources.sh"; sourceTree = "<group>"; };
+		C72A940D6A0CCF1F663BD84399704640 /* Pods-AngPlayer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AngPlayer_Example-frameworks.sh"; sourceTree = "<group>"; };
+		CAE68DFECB19FE46E0A87CFFFBBC6859 /* AngPlayerVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AngPlayerVC.swift; sourceTree = "<group>"; };
+		D4E099C1B5E16B1BB7546479AB94134D /* AngPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AngPlayer.framework; path = AngPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D857B5ECD47DB556A0DD791BB65D738D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1D8BD8127E38D9E01C33C394EFC9AA6 /* Pods-AngPlayer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-AngPlayer_Example.modulemap"; sourceTree = "<group>"; };
+		EBD285EC9B7901232933AC6A20A3863E /* Pods_AngPlayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AngPlayer_Example.framework; path = "Pods-AngPlayer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F741510201077B7F781C49B3D2B505CF /* Pods-AngPlayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AngPlayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		F7B4848FE2140437B58A0F131728102B /* AngPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AngPlayer-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AA4B4AAAFA7CE38D43407EB3F251275 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				014A375DEED22B931CDA3FBD5BCE4F9D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4402C8FF6B842A3162AE05CE651A66DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E40D7003FEC135C1008D0BDD090194D5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2445B23FDF9E455F052BCC50424548D1 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41D05A4986C2B442E6E0700D3D0CEAB0 /* AngPlayer */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		41D05A4986C2B442E6E0700D3D0CEAB0 /* AngPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				A75153268E4ABA0218C8C6AA859973D0 /* AngPlayer */,
+				9118BF293A2E6FD8DD50B1F86FF4818C /* Support Files */,
+			);
+			name = AngPlayer;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		46F7593858A8F5458D11E1425EFF3EF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4E099C1B5E16B1BB7546479AB94134D /* AngPlayer.framework */,
+				EBD285EC9B7901232933AC6A20A3863E /* Pods_AngPlayer_Example.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66340239EBE83AA96A8F1C1E57416DD1 /* Pods-AngPlayer_Example */ = {
+			isa = PBXGroup;
+			children = (
+				55EB52A0C19E97C93915096362AE51BD /* Info.plist */,
+				E1D8BD8127E38D9E01C33C394EFC9AA6 /* Pods-AngPlayer_Example.modulemap */,
+				506684CCF112D7EF738E98D3C5FBCA79 /* Pods-AngPlayer_Example-acknowledgements.markdown */,
+				42CD90CF4405C385D3AC759ECE701D20 /* Pods-AngPlayer_Example-acknowledgements.plist */,
+				33929FB10CA272AB2D06A7AD238BF47B /* Pods-AngPlayer_Example-dummy.m */,
+				C72A940D6A0CCF1F663BD84399704640 /* Pods-AngPlayer_Example-frameworks.sh */,
+				B10069E1EDD17F7DF36538D7B048701D /* Pods-AngPlayer_Example-resources.sh */,
+				5A50D984E0D55B2262E0630F218C5FC1 /* Pods-AngPlayer_Example-umbrella.h */,
+				F741510201077B7F781C49B3D2B505CF /* Pods-AngPlayer_Example.debug.xcconfig */,
+				094C4BD90361C5F866806998D0EBD6FC /* Pods-AngPlayer_Example.release.xcconfig */,
+			);
+			name = "Pods-AngPlayer_Example";
+			path = "Target Support Files/Pods-AngPlayer_Example";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				2445B23FDF9E455F052BCC50424548D1 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				46F7593858A8F5458D11E1425EFF3EF8 /* Products */,
+				B7671184A7E77DEEF8A34134F1869E4E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9118BF293A2E6FD8DD50B1F86FF4818C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				318BA984CD12754B4C52F9488E1791C9 /* AngPlayer.modulemap */,
+				32BADA8A59BF546EC846F50625C64324 /* AngPlayer.xcconfig */,
+				477E4F60C808C0128C9C5E545D6B5089 /* AngPlayer-dummy.m */,
+				F7B4848FE2140437B58A0F131728102B /* AngPlayer-prefix.pch */,
+				285BC8CB8C1A1F232EBF699C1FE4D033 /* AngPlayer-umbrella.h */,
+				D857B5ECD47DB556A0DD791BB65D738D /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/AngPlayer";
+			sourceTree = "<group>";
+		};
+		96A63C299A653D0CAA63BF7F4A642E9F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4C797F90CBF410C525ADBCA414A721EB /* AngPlayer.swift */,
+				CAE68DFECB19FE46E0A87CFFFBBC6859 /* AngPlayerVC.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A75153268E4ABA0218C8C6AA859973D0 /* AngPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				96A63C299A653D0CAA63BF7F4A642E9F /* Classes */,
+			);
+			name = AngPlayer;
+			path = AngPlayer;
+			sourceTree = "<group>";
+		};
+		B7671184A7E77DEEF8A34134F1869E4E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				66340239EBE83AA96A8F1C1E57416DD1 /* Pods-AngPlayer_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		196FD246172F6E4B28A958CDBC8D82A5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B421213007E10EDEE30440F34DFAA375 /* AngPlayer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		488289588FF155573B2D5DCDE92B2F24 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1F425571BFCD4A436D2E1B36578DD0B /* Pods-AngPlayer_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		16717C852EB638F9C87E6644E3D9B70B /* Pods-AngPlayer_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F76DCF19BD9898CC92706B87F16B0AC /* Build configuration list for PBXNativeTarget "Pods-AngPlayer_Example" */;
+			buildPhases = (
+				806AF7D8D9674721801F4C853FAF656C /* Sources */,
+				3AA4B4AAAFA7CE38D43407EB3F251275 /* Frameworks */,
+				488289588FF155573B2D5DCDE92B2F24 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F5B9C3713AD7EF155CC53CD02D83A9E /* PBXTargetDependency */,
+			);
+			name = "Pods-AngPlayer_Example";
+			productName = "Pods-AngPlayer_Example";
+			productReference = EBD285EC9B7901232933AC6A20A3863E /* Pods_AngPlayer_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		72C9B5FCC82B52FAF1A5398389972DA0 /* AngPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12ED457CE520B5ACB1B547880CEDC8F1 /* Build configuration list for PBXNativeTarget "AngPlayer" */;
+			buildPhases = (
+				95C8E81FE9E2AB0093D31E7C36B55DC5 /* Sources */,
+				4402C8FF6B842A3162AE05CE651A66DC /* Frameworks */,
+				196FD246172F6E4B28A958CDBC8D82A5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AngPlayer;
+			productName = AngPlayer;
+			productReference = D4E099C1B5E16B1BB7546479AB94134D /* AngPlayer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 46F7593858A8F5458D11E1425EFF3EF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72C9B5FCC82B52FAF1A5398389972DA0 /* AngPlayer */,
+				16717C852EB638F9C87E6644E3D9B70B /* Pods-AngPlayer_Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		806AF7D8D9674721801F4C853FAF656C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74ACF614CA789DEB84000C464C01963A /* Pods-AngPlayer_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95C8E81FE9E2AB0093D31E7C36B55DC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6427DC1970EEA7B808FC5E059A2695EE /* AngPlayer-dummy.m in Sources */,
+				755F99EF74EFD590263A8E3AE785EF71 /* AngPlayer.swift in Sources */,
+				7A9CA3825543A6A9BAB810AFCC9A5006 /* AngPlayerVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F5B9C3713AD7EF155CC53CD02D83A9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AngPlayer;
+			target = 72C9B5FCC82B52FAF1A5398389972DA0 /* AngPlayer */;
+			targetProxy = 9FB148519C2D86C57E061C2D880FB5BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		30F3825B88AED93EC6885BE85B7C43CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F741510201077B7F781C49B3D2B505CF /* Pods-AngPlayer_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-AngPlayer_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AngPlayer_Example/Pods-AngPlayer_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AngPlayer_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		6086982CD721282DA6A5F14A20AC7D19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32BADA8A59BF546EC846F50625C64324 /* AngPlayer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AngPlayer/AngPlayer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AngPlayer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AngPlayer/AngPlayer.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AngPlayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		98F0BA4F25AEDDC47FADB80A5082EB82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 094C4BD90361C5F866806998D0EBD6FC /* Pods-AngPlayer_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-AngPlayer_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AngPlayer_Example/Pods-AngPlayer_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AngPlayer_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AA1163AB614C37290298EDAF8D95BCF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32BADA8A59BF546EC846F50625C64324 /* AngPlayer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AngPlayer/AngPlayer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AngPlayer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AngPlayer/AngPlayer.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AngPlayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12ED457CE520B5ACB1B547880CEDC8F1 /* Build configuration list for PBXNativeTarget "AngPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6086982CD721282DA6A5F14A20AC7D19 /* Debug */,
+				AA1163AB614C37290298EDAF8D95BCF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
+				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F76DCF19BD9898CC92706B87F16B0AC /* Build configuration list for PBXNativeTarget "Pods-AngPlayer_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30F3825B88AED93EC6885BE85B7C43CD /* Debug */,
+				98F0BA4F25AEDDC47FADB80A5082EB82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

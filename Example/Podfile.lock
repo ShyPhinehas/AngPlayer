@@ -1,0 +1,16 @@
+PODS:
+  - AngPlayer (0.1.0)
+
+DEPENDENCIES:
+  - AngPlayer (from `../`)
+
+EXTERNAL SOURCES:
+  AngPlayer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AngPlayer: 8a2e32ea7f7cae08a59b23a08c79525e5959e8ab
+
+PODFILE CHECKSUM: 4655b3f7663281dda5d5f0e56b321b1a3eb8017a
+
+COCOAPODS: 1.2.1

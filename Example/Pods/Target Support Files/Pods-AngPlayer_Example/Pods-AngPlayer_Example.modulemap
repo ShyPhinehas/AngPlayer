@@ -1,0 +1,6 @@
+framework module Pods_AngPlayer_Example {
+  umbrella header "Pods-AngPlayer_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

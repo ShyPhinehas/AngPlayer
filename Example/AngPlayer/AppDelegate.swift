@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AngPlayer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = AngPlayerVC()
+        window?.makeKeyAndVisible()
+
+        
         // Override point for customization after application launch.
         return true
     }

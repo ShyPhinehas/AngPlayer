@@ -1,0 +1,6 @@
+framework module AngPlayer {
+  umbrella header "AngPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}
