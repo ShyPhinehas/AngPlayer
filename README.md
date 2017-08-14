@@ -5,6 +5,10 @@
 [![License](https://img.shields.io/cocoapods/l/AngPlayer.svg?style=flat)](http://cocoapods.org/pods/AngPlayer)
 [![Platform](https://img.shields.io/cocoapods/p/AngPlayer.svg?style=flat)](http://cocoapods.org/pods/AngPlayer)
 
+##  Play your video more easly##
+
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
