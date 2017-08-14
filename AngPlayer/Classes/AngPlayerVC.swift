@@ -9,6 +9,23 @@
 import UIKit
 import AVFoundation
 
+/**
+ 1. file in Resaurce
+ angPlayer.url = FileLocation.bundle.url(filePath: "001.mp4")
+ 
+ 2. web
+ angPlayer.url = URL(string: "http://www.littlefox.net/app/api/m3u8/MDAwMDcwNDQ1MDA4MTAxMjAxNjAyMDIxNDA3MzQ5OTY0NTAyMDE3MTQzOHwzNzE0MTAzOHw1MjU5OTM5OXxXfDY0MCoxMTM2fGtvfEtSfDR8MTg")
+ 
+ 3. files
+ let urls : [URL?] = [
+ URL(string: "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8"),
+ URL(string: "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"),
+ URL(string: "https://mnmedias.api.telequebec.tv/m3u8/29880.m3u8"),
+ FileLocation.bundle.url(filePath: "001.mp4"),
+ ]
+ angPlayer.urls = urls
+ */
+
 open class AngPlayerVC: UIViewController, AngPlayerViewDelegate {
 
     var angPlayer: AngPlayer!
@@ -17,6 +34,7 @@ open class AngPlayerVC: UIViewController, AngPlayerViewDelegate {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         angPlayer = AngPlayer(frame: UIScreen.main.bounds)
+        angPlayer.delegate = self
         self.view.addSubview(angPlayer)
     }
     
@@ -26,28 +44,6 @@ open class AngPlayerVC: UIViewController, AngPlayerViewDelegate {
 
     override open func viewDidLoad() {
         super.viewDidLoad()
-        
-        angPlayer.delegate = self
-        /**
-         1. file in Resaurce 
-         angPlayer.url = FileLocation.bundle.url(filePath: "001.mp4")
-         
-         2. web 
-         angPlayer.url = URL(string: "http://www.littlefox.net/app/api/m3u8/MDAwMDcwNDQ1MDA4MTAxMjAxNjAyMDIxNDA3MzQ5OTY0NTAyMDE3MTQzOHwzNzE0MTAzOHw1MjU5OTM5OXxXfDY0MCoxMTM2fGtvfEtSfDR8MTg")
-         
-         3. files
-         let urls : [URL?] = [
-                     URL(string: "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8"),
-                     URL(string: "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"),
-                     URL(string: "https://mnmedias.api.telequebec.tv/m3u8/29880.m3u8"),
-                     FileLocation.bundle.url(filePath: "001.mp4"),
-         ]
-         angPlayer.urls = urls
-         */
-
-        angPlayer.url = URL(string: "http://www.littlefox.net/app/api/m3u8/MDAwMDcwNDQ1MDA4MTAxMjAxNjAyMDIxNDA3MzQ5OTY0NTAyMDE3MTQzOHwzNzE0MTAzOHw1MjU5OTM5OXxXfDY0MCoxMTM2fGtvfEtSfDR8MTg")
-        
-        angPlayer.addPanGesture()
     }
 
     override open func didReceiveMemoryWarning() {
