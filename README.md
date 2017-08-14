@@ -40,16 +40,16 @@ pod "AngPlayer"
         	angPlayer = AngPlayer(frame: UIScreen.main.bounds)
         	self.view.addSubview(angPlayer)
  		}
- 
 3. Link Url 
  
- 	file in Resaurce 
-        	 angPlayer.url = FileLocation.bundle.url(filePath: "001.mp4")
+ 
+ 		file in Resaurce 
+        		angPlayer.url = FileLocation.bundle.url(filePath: "001.mp4")
          
-    web 
-    	     angPlayer.url = URL(string: "http://<>")
+    	web 
+    		     angPlayer.url = URL(string: "http://<>")
          
-    files
+   	 files
         	 let urls : [URL?] = [
                      URL(string: "https://<>.m3u8"),
                      URL(string: "https://<>.m3u8"),
@@ -58,7 +58,7 @@ pod "AngPlayer"
          	]
          	angPlayer.urls = urls
 
-4. Use Delegate
+4.Use Delegate
 
 		public func angPlayerCallback(loadStart player: AngPlayer){
     	    self.addSpinner()
