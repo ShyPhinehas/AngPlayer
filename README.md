@@ -51,9 +51,13 @@ pod "AngPlayer"
          
     files
         	 let urls : [URL?] = [
+             
                      URL(string: "https://<>.m3u8"),
+                     
                      URL(string: "https://<>.m3u8"),
+                     
                      URL(string: "https://<>0.m3u8"),
+                     
                      FileLocation.bundle.url(filePath: "001.mp4"),
          	]
          	angPlayer.urls = urls
