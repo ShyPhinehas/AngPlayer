@@ -13,8 +13,8 @@ import MediaPlayer
 public protocol AngPlayerViewDelegate: class {
     func angPlayerCallback(loadStart player: AngPlayer)
     func angPlayerCallback(loadFinshied player: AngPlayer, isLoadSuccess: Bool, error: Error?)
-    func angPlayerCallback(player: AngPlayer, statusPlayer: AVPlayerStatus, error: Error?)
-    func angPlayerCallback(player: AngPlayer, statusItemPlayer: AVPlayerItemStatus, error: Error?)
+    func angPlayerCallback(player: AngPlayer, statusPlayer: AVPlayer.Status, error: Error?)
+    func angPlayerCallback(player: AngPlayer, statusItemPlayer: AVPlayerItem.Status, error: Error?)
     func angPlayerCallback(player: AngPlayer, loadedTimeRanges: [CMTimeRange])
     func angPlayerCallback(player: AngPlayer, duration: Double)
     func angPlayerCallback(player: AngPlayer, currentTime: Double)
@@ -52,28 +52,28 @@ public enum AngPlayerViewFillMode {
     case resizeAspectFill
     case resize
     
-    init?(videoGravity: String){
+    init?(videoGravity: AVLayerVideoGravity){
         switch videoGravity {
-        case AVLayerVideoGravityResizeAspect:
+        case .resizeAspect:
             self = .resizeAspect
-        case AVLayerVideoGravityResizeAspectFill:
+        case .resizeAspectFill:
             self = .resizeAspectFill
-        case AVLayerVideoGravityResize:
+        case .resize:
             self = .resize
         default:
             return nil
         }
     }
     
-    var AVLayerVideoGravity:String {
+    var AVLayerVideoGravity: AVLayerVideoGravity {
         get {
             switch self {
             case .resizeAspect:
-                return AVLayerVideoGravityResizeAspect
+                return .resizeAspect
             case .resizeAspectFill:
-                return AVLayerVideoGravityResizeAspectFill
+                return .resizeAspectFill
             case .resize:
-                return AVLayerVideoGravityResize
+                return .resize
             }
         }
     }
@@ -107,7 +107,7 @@ public class AngPlayer: UIView {
     lazy fileprivate var _MPVolumeSlider: UISlider? = {
         return MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider
     }()
-
+    
     var playerLayer: AVPlayerLayer {
         get {
             return self.layer as! AVPlayerLayer
@@ -163,12 +163,12 @@ public class AngPlayer: UIView {
             guard let timescale = player?.currentItem?.duration.timescale else {
                 return
             }
-            let newTime = CMTimeMakeWithSeconds(newValue, timescale)
-            player!.seek(to: newTime,toleranceBefore: kCMTimeZero,toleranceAfter: kCMTimeZero)
+            let newTime = CMTimeMakeWithSeconds(newValue, preferredTimescale: timescale)
+            player!.seek(to: newTime,toleranceBefore: CMTime.zero,toleranceAfter: CMTime.zero)
         }
     }
     
-    public var interval = CMTimeMake(1, 60) {
+    public var interval = CMTimeMake(value: 1, timescale: 60) {
         didSet {
             if rate != 0 {
                 addCurrentTimeObserver()
@@ -199,7 +199,7 @@ public class AngPlayer: UIView {
         if let range = range {
             return range.timeRangeValue
         }
-        return kCMTimeRangeZero
+        return CMTimeRange.zero
     }
     
     public var url: URL? {
@@ -246,16 +246,16 @@ public class AngPlayer: UIView {
             }
         }
     }
-  
+    
     public func preparePlayer(url: URL) {
         
         self.delegate?.angPlayerCallback(loadStart: self)
         
         resetPlayer()
-
+        
         let asset = AVURLAsset(url: url)
         let requestKeys : [String] = [tPlayerTracksKey,tPlayerPlayableKey,tPlayerDurationKey]
-        asset.loadValuesAsynchronously(forKeys: requestKeys) { 
+        asset.loadValuesAsynchronously(forKeys: requestKeys) {
             DispatchQueue.main.async {
                 for key in requestKeys{
                     var error: NSError?
@@ -278,7 +278,7 @@ public class AngPlayer: UIView {
             }
         }
     }
-
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         initPlayer()
@@ -301,15 +301,15 @@ public class AngPlayer: UIView {
     }
     
     private func soundEnableAtBibrationOff(){
-        do{try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)}catch{}
+        do{try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)}catch{}
     }
-
+    
     private func addObserversPlayer(avPlayer: AVPlayer) {
         avPlayer.addObserver(self, forKeyPath: tPlayerStatusKey, options: [.new], context: &statusContext)
         avPlayer.addObserver(self, forKeyPath: tPlayerRateKey, options: [.new], context: &rateContext)
         avPlayer.addObserver(self, forKeyPath: tCurrentItemKey, options: [.old,.new], context: &playerItemContext)
     }
-
+    
     private func removeObserversPlayer(avPlayer: AVPlayer) {
         
         avPlayer.removeObserver(self, forKeyPath: tPlayerStatusKey, context: &statusContext)
@@ -351,13 +351,13 @@ public class AngPlayer: UIView {
             if let mySelf = self {
                 self?.delegate?.angPlayerCallback(player: mySelf, currentTime: mySelf.currentTime)
             }
-        } as AnyObject?
+            } as AnyObject?
     }
     
     @objc private func playerItemDidPlayToEndTime(aNotification: NSNotification) {
         self.delegate?.angPlayerCallback(playerFinished: self)
     }
-
+    
     public func play() {
         rate = 1
     }
@@ -365,7 +365,7 @@ public class AngPlayer: UIView {
     public func pause() {
         rate = 0
     }
-
+    
     public func stop() {
         currentTime = 0
         pause()
@@ -386,10 +386,10 @@ public class AngPlayer: UIView {
     }
     
     public func playFromBeginning() {
-        self.player?.seek(to: kCMTimeZero)
+        self.player?.seek(to: CMTime.zero)
         self.player?.play()
     }
-
+    
     private func resetPlayer() {
         guard let player = player else {
             return
@@ -405,7 +405,7 @@ public class AngPlayer: UIView {
         self.player = nil
         
     }
-
+    
     public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
         if context == &statusContext {
@@ -523,21 +523,21 @@ extension AngPlayer : UIGestureRecognizerDelegate {
 }
 
 public extension AngPlayer {
-    public func screenshot() throws -> UIImage? {
+    func screenshot() throws -> UIImage? {
         guard let time = player?.currentItem?.currentTime() else {
             return nil
         }
         return try screenshotCMTime(cmTime: time)?.0
     }
     
-    public func screenshotTime(time: Double? = nil) throws -> (UIImage, photoTime: CMTime)?{
+    func screenshotTime(time: Double? = nil) throws -> (UIImage, photoTime: CMTime)?{
         guard let timescale = player?.currentItem?.duration.timescale else {
             return nil
         }
         
         let timeToPicture: CMTime
         if let time = time {
-            timeToPicture = CMTimeMakeWithSeconds(time, timescale)
+            timeToPicture = CMTimeMakeWithSeconds(time, preferredTimescale: timescale)
         } else if let time = player?.currentItem?.currentTime() {
             timeToPicture = time
         } else {
@@ -552,10 +552,10 @@ public extension AngPlayer {
         }
         let imageGenerator = AVAssetImageGenerator(asset: asset)
         
-        var timePicture = kCMTimeZero
+        var timePicture = CMTime.zero
         imageGenerator.appliesPreferredTrackTransform = true
-        imageGenerator.requestedTimeToleranceAfter = kCMTimeZero
-        imageGenerator.requestedTimeToleranceBefore = kCMTimeZero
+        imageGenerator.requestedTimeToleranceAfter = CMTime.zero
+        imageGenerator.requestedTimeToleranceBefore = CMTime.zero
         
         let ref = try imageGenerator.copyCGImage(at: cmTime, actualTime: &timePicture)
         let viewImage: UIImage = UIImage(cgImage: ref)

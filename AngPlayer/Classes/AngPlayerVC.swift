@@ -27,7 +27,7 @@ import AVFoundation
  */
 
 open class AngPlayerVC: UIViewController, AngPlayerViewDelegate {
-
+    
     var angPlayer: AngPlayer!
     var spinner : UIActivityIndicatorView?
     
@@ -41,11 +41,11 @@ open class AngPlayerVC: UIViewController, AngPlayerViewDelegate {
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
+    
     override open func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -61,23 +61,23 @@ open class AngPlayerVC: UIViewController, AngPlayerViewDelegate {
             print("load error : \(String(describing: error?.localizedDescription))")
         }
     }
-    public func angPlayerCallback(player: AngPlayer, statusPlayer: AVPlayerStatus, error: Error?){}
-    public func angPlayerCallback(player: AngPlayer, statusItemPlayer: AVPlayerItemStatus, error: Error?){}
+    public func angPlayerCallback(player: AngPlayer, statusPlayer: AVPlayer.Status, error: Error?){}
+    public func angPlayerCallback(player: AngPlayer, statusItemPlayer: AVPlayerItem.Status, error: Error?){}
     public func angPlayerCallback(player: AngPlayer, loadedTimeRanges: [CMTimeRange]){
         //set loaded range value to loaded Slide
         /*
-            let durationTotal = loadedTimeRanges.reduce(0) { (actual, range) -> Double in
-                return actual + range.end.seconds
-            }
-            let dur2 = Float(durationTotal)
-            loadedPlaySlider?.value = dur2
+         let durationTotal = loadedTimeRanges.reduce(0) { (actual, range) -> Double in
+         return actual + range.end.seconds
+         }
+         let dur2 = Float(durationTotal)
+         loadedPlaySlider?.value = dur2
          */
     }
     public func angPlayerCallback(player: AngPlayer, duration: Double){
         //set play slide maxValue and load slile maxValue
         /*
-            playSlider?.maximumValue = Float(duration)
-            loadedPlaySlider?.maximumValue = Float(duration)
+         playSlider?.maximumValue = Float(duration)
+         loadedPlaySlider?.maximumValue = Float(duration)
          */
     }
     public func angPlayerCallback(player: AngPlayer, currentTime: Double){
@@ -102,7 +102,7 @@ open class AngPlayerVC: UIViewController, AngPlayerViewDelegate {
     public func angPlayerCallback(pangestureLocation touchLocation: CGPoint, valueLength: CGPoint){
         self.angPlayer.changeVolumeByGesture(by: touchLocation)
     }
-
+    
     @IBAction func nextBtnCallback(_ sender: Any) {
         angPlayer.next()
     }
@@ -118,7 +118,7 @@ extension AngPlayerVC{
         removeSpinner()
         self.view.isUserInteractionEnabled = !isPreventouch
         spinner = UIActivityIndicatorView(frame: UIScreen.main.bounds)
-        spinner?.activityIndicatorViewStyle = .white
+        spinner?.style = .white
         spinner?.startAnimating()
         self.view.addSubview(spinner!)
     }

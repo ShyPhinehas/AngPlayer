@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		094C4BD90361C5F866806998D0EBD6FC /* Pods-AngPlayer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AngPlayer_Example.release.xcconfig"; sourceTree = "<group>"; };
 		285BC8CB8C1A1F232EBF699C1FE4D033 /* AngPlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AngPlayer-umbrella.h"; sourceTree = "<group>"; };
-		318BA984CD12754B4C52F9488E1791C9 /* AngPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AngPlayer.modulemap; sourceTree = "<group>"; };
+		318BA984CD12754B4C52F9488E1791C9 /* AngPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AngPlayer.modulemap; sourceTree = "<group>"; };
 		32BADA8A59BF546EC846F50625C64324 /* AngPlayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AngPlayer.xcconfig; sourceTree = "<group>"; };
 		33929FB10CA272AB2D06A7AD238BF47B /* Pods-AngPlayer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AngPlayer_Example-dummy.m"; sourceTree = "<group>"; };
 		42CD90CF4405C385D3AC759ECE701D20 /* Pods-AngPlayer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AngPlayer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -40,14 +40,14 @@
 		55EB52A0C19E97C93915096362AE51BD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A50D984E0D55B2262E0630F218C5FC1 /* Pods-AngPlayer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AngPlayer_Example-umbrella.h"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B10069E1EDD17F7DF36538D7B048701D /* Pods-AngPlayer_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AngPlayer_Example-resources.sh"; sourceTree = "<group>"; };
 		C72A940D6A0CCF1F663BD84399704640 /* Pods-AngPlayer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AngPlayer_Example-frameworks.sh"; sourceTree = "<group>"; };
 		CAE68DFECB19FE46E0A87CFFFBBC6859 /* AngPlayerVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AngPlayerVC.swift; sourceTree = "<group>"; };
-		D4E099C1B5E16B1BB7546479AB94134D /* AngPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AngPlayer.framework; path = AngPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4E099C1B5E16B1BB7546479AB94134D /* AngPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AngPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D857B5ECD47DB556A0DD791BB65D738D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1D8BD8127E38D9E01C33C394EFC9AA6 /* Pods-AngPlayer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-AngPlayer_Example.modulemap"; sourceTree = "<group>"; };
-		EBD285EC9B7901232933AC6A20A3863E /* Pods_AngPlayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AngPlayer_Example.framework; path = "Pods-AngPlayer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D8BD8127E38D9E01C33C394EFC9AA6 /* Pods-AngPlayer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AngPlayer_Example.modulemap"; sourceTree = "<group>"; };
+		EBD285EC9B7901232933AC6A20A3863E /* Pods_AngPlayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AngPlayer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F741510201077B7F781C49B3D2B505CF /* Pods-AngPlayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AngPlayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F7B4848FE2140437B58A0F131728102B /* AngPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AngPlayer-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,7 +148,6 @@
 				4C797F90CBF410C525ADBCA414A721EB /* AngPlayer.swift */,
 				CAE68DFECB19FE46E0A87CFFFBBC6859 /* AngPlayerVC.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -157,7 +156,6 @@
 			children = (
 				96A63C299A653D0CAA63BF7F4A642E9F /* Classes */,
 			);
-			name = AngPlayer;
 			path = AngPlayer;
 			sourceTree = "<group>";
 		};
@@ -256,6 +254,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -415,7 +414,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -531,7 +530,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
