@@ -163,12 +163,12 @@ public class AngPlayer: UIView {
             guard let timescale = player?.currentItem?.duration.timescale else {
                 return
             }
-            let newTime = CMTimeMakeWithSeconds(newValue, preferredTimescale: timescale)
-            player!.seek(to: newTime,toleranceBefore: CMTime.zero,toleranceAfter: CMTime.zero)
+            let newTime = CMTimeMakeWithSeconds(newValue, timescale)
+            player!.seek(to: newTime,toleranceBefore: kCMTimeZero,toleranceAfter: kCMTimeZero)
         }
     }
     
-    public var interval = CMTimeMake(value: 1, timescale: 60) {
+    public var interval = CMTimeMake(1, 60) {
         didSet {
             if rate != 0 {
                 addCurrentTimeObserver()
@@ -199,7 +199,7 @@ public class AngPlayer: UIView {
         if let range = range {
             return range.timeRangeValue
         }
-        return CMTimeRange.zero
+        return kCMTimeRangeZero
     }
     
     public var url: URL? {
@@ -301,7 +301,7 @@ public class AngPlayer: UIView {
     }
     
     private func soundEnableAtBibrationOff(){
-        do{try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)}catch{}
+        do{try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)}catch{}
     }
     
     private func addObserversPlayer(avPlayer: AVPlayer) {
@@ -386,7 +386,7 @@ public class AngPlayer: UIView {
     }
     
     public func playFromBeginning() {
-        self.player?.seek(to: CMTime.zero)
+        self.player?.seek(to: kCMTimeZero)
         self.player?.play()
     }
     
@@ -537,7 +537,7 @@ public extension AngPlayer {
         
         let timeToPicture: CMTime
         if let time = time {
-            timeToPicture = CMTimeMakeWithSeconds(time, preferredTimescale: timescale)
+            timeToPicture = CMTimeMakeWithSeconds(time, timescale)
         } else if let time = player?.currentItem?.currentTime() {
             timeToPicture = time
         } else {
@@ -552,10 +552,10 @@ public extension AngPlayer {
         }
         let imageGenerator = AVAssetImageGenerator(asset: asset)
         
-        var timePicture = CMTime.zero
+        var timePicture = kCMTimeZero
         imageGenerator.appliesPreferredTrackTransform = true
-        imageGenerator.requestedTimeToleranceAfter = CMTime.zero
-        imageGenerator.requestedTimeToleranceBefore = CMTime.zero
+        imageGenerator.requestedTimeToleranceAfter = kCMTimeZero
+        imageGenerator.requestedTimeToleranceBefore = kCMTimeZero
         
         let ref = try imageGenerator.copyCGImage(at: cmTime, actualTime: &timePicture)
         let viewImage: UIImage = UIImage(cgImage: ref)

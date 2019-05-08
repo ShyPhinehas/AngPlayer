@@ -118,7 +118,7 @@ extension AngPlayerVC{
         removeSpinner()
         self.view.isUserInteractionEnabled = !isPreventouch
         spinner = UIActivityIndicatorView(frame: UIScreen.main.bounds)
-        spinner?.style = .white
+        spinner?.activityIndicatorViewStyle = .white
         spinner?.startAnimating()
         self.view.addSubview(spinner!)
     }
